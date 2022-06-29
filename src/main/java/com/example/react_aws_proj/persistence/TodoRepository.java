@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface TodoRepository extends JpaRepository<TodoEntity,String> {
 
-    @Query(value = "select * from Todo t where t.uesrId= ?1",nativeQuery = true)
+    @Query(value = "select t from Todo t where t.userId= ?1")
     List<TodoEntity> findByUserId(String uesrId);
 
 }

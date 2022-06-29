@@ -15,13 +15,13 @@ import javax.persistence.Table;
 @NoArgsConstructor      // 파라미터 없는 기본 생성자 생성
 @AllArgsConstructor     // 모든 필드 값을 파라미터로 받는 생성자 생성
 @Data                   // @Getter | @Setter | @RequiredArgsConstructor | @toString | @EqualsAndHashCode 를 한번에 설정
-@Entity
-@Table(name ="Todo")
+@Entity(name = "Todo")
+@Table
 public class TodoEntity {
 
     @Id
     @GeneratedValue(generator = "system-uuid")                      // ID를 자동생성하겠다는 뜻
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")      // system-uuid라는 generator를 사용할것
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")      // system-uuid라는 generator를 사ㅜ믇할것
     // 오브젝트의 ID
     private String id;
 
